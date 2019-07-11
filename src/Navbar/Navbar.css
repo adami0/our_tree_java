@@ -1,0 +1,8 @@
+#navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #1a6d80;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+}
+

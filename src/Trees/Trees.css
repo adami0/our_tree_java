@@ -1,0 +1,76 @@
+#trees-container {
+    min-height: 560px;
+    max-height: 700px;
+    width:100%;
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(10, 1fr);
+}
+
+#page-name {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+.btn {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+#inputTreeContainer {
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+#treeList {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    margin-top: 30px;
+}
+
+.treeListDiv {
+    border: 2px solid;
+    display: flex;
+    justify-content: space-around;
+}
+
+.siimple-btn--small {
+    margin: auto;
+}
+
+.white {
+    background-color: white;
+}
+
+@media screen and (min-width: 800px) {
+    #inputTreeContainer {
+        grid-column-start: 4;
+        grid-column-end: 8;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #inputTree {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        width: 100%;
+    }
+}
