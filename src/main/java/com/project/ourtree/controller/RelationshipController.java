@@ -18,6 +18,13 @@ public class RelationshipController {
         return relationshipRepository.findRelationshipListByMemberId(member1_id);
     }
 
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/getRelationshipListByTreeId/{tree_id}")
+    public List<Relationship> getRelationshipListByTree_id(@PathVariable int tree_id) {
+        return relationshipRepository.findRelationshipListByTree_id(tree_id);
+    }
+
     @PostMapping("/postRelationship")
     public String postRelationship(@RequestBody Relationship relationship){
         relationshipRepository.save(relationship);

@@ -13,6 +13,7 @@ public class MemberController {
     @Autowired
     private MemberRepository memberRepository;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/getMemberList/{tree_id}")
     public List<Member> getMemberListByTreeId(@PathVariable int tree_id) {
         return memberRepository.findAllByTree_id(tree_id);
@@ -29,5 +30,4 @@ public class MemberController {
         memberRepository.save(member);
         return "member updated";
     }
-
 }

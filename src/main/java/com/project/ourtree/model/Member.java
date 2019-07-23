@@ -1,6 +1,7 @@
 package com.project.ourtree.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -18,6 +19,7 @@ public class Member {
     private String death_place;
     private String text;
     private int tree_id;
+
 
     public int getId() {
         return id;
@@ -100,4 +102,5 @@ public class Member {
         this.text = text;
         this.tree_id = tree_id;
     }
+
 }

@@ -1,9 +1,8 @@
 package com.project.ourtree.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.stereotype.Repository;
+
+import javax.persistence.*;
 
 @Entity
 public class Relationship {
@@ -16,6 +15,7 @@ public class Relationship {
     private int relationship_type_code;
     private int member1_role_code;
     private int member2_role_code;
+
 
     public int getId() {
         return id;
@@ -40,6 +40,7 @@ public class Relationship {
     public int getMember2_role_code() {
         return member2_role_code;
     }
+
 
     public Relationship() {
     }

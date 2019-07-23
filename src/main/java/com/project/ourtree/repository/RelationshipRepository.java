@@ -11,6 +11,9 @@ import java.util.List;
 @Repository
 public interface RelationshipRepository extends JpaRepository<Relationship, Integer> {
 
+    @Query(value="SELECT r.* FROM relationship r, member m WHERE m.tree_id=:tree_id AND m.id=r.member1_id",nativeQuery = true)
+    List<Relationship> findRelationshipListByTree_id(@Param("tree_id") int tree_id);
+
     @Query(value="SELECT r.* FROM relationship r WHERE r.member1_id=:member1_id",nativeQuery = true)
     List<Relationship> findRelationshipListByMemberId(@Param("member1_id") int member1_id);
 }
